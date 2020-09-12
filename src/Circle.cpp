@@ -39,3 +39,17 @@ void Circle::setRadius(double radius) {
 Circle::~Circle() {
 
 }
+
+Circle &Circle::operator=(const Circle &copy) {
+    _center = copy._center;
+    _radius = copy._radius;
+    return *this;
+}
+
+bool Circle::operator==(const Circle &circle) {
+    return (_center == circle._center) and (_radius == circle._radius);
+}
+
+bool Circle::operator!=(const Circle &circle) {
+    return !(*this == circle);
+}
