@@ -8,6 +8,8 @@
 #include "Curve.h"
 #include "Point.h"
 
+const double PI = 3.141592653589793;
+
 class Circle : public Curve{
 public:
     Circle();
@@ -19,10 +21,11 @@ public:
     const Point& center() const {return this->_center;}
 
     double getRadius() const {return this->_radius;}
-    void setRadius();
+    void setRadius(double radius);
 
     double area() const override;
 
+    ~Circle();
 private:
     Point _center;
     double _radius;

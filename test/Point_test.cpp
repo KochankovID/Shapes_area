@@ -40,3 +40,27 @@ TEST(Point_assignment, assign_operator_correct){
     ASSERT_EQ(a.x, 1);
     ASSERT_EQ(a.y, 2);
 }
+
+TEST(Point_equal, equal_operator_no_throw){
+    Point a(1, -2), b(1,-2);
+
+    ASSERT_NO_THROW(a == b);
+}
+
+TEST(Point_equal, equal_operator_correct){
+    Point a(1, -2), b(1,-2);
+
+    ASSERT_EQ(a == b, true);
+}
+
+TEST(Point_equal, unequal_operator_no_throw){
+    Point a(1, -2), b(1,-2);
+
+    ASSERT_NO_THROW(a != b);
+}
+
+TEST(Point_equal, unequal_operator_correct){
+    Point a(1, 2), b(1,-2);
+
+    ASSERT_EQ(a != b, true);
+}

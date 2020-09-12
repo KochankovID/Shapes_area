@@ -13,6 +13,8 @@ struct Point{
     Point(const Point& copy);
 
     Point& operator=(const Point& copy);
+    bool operator==(const Point& point) const;
+    bool operator!=(const Point& point) const;
 
     virtual ~Point();
 

@@ -6,6 +6,7 @@
 #define SHAPES_AREA_CURVE_H
 
 class Curve{
+public:
     virtual double area() const = 0;
 };
 

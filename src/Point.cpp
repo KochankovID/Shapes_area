@@ -28,3 +28,11 @@ Point &Point::operator=(const Point &copy) {
     this->y = copy.y;
     return *this;
 }
+
+bool Point::operator==(const Point &point) const {
+    return (this->x == point.x) and (this->y == point.y);
+}
+
+bool Point::operator!=(const Point &point) const {
+    return !this->operator==(point);
+}
