@@ -8,7 +8,7 @@
 #include "Circle.h"
 #include "PCenter.h"
 
-class PCircle : public PCenter, public virtual Circle{
+class PCircle : public PCenter, public Circle{
 public:
     PCircle();
     PCircle(const Point& center, double radius);

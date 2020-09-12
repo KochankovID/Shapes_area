@@ -8,8 +8,6 @@
 #include "Curve.h"
 #include "Center.h"
 
-const double PI = 3.141592653589793;
-
 class Circle : public Curve, public virtual Center{
 public:
     virtual double getRadius() const = 0;

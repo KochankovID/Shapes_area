@@ -7,6 +7,8 @@
 
 #include "Point.h"
 
+const double PI = 3.141592653589793;
+
 class Curve{
 public:
     virtual double area() const = 0;

@@ -3,7 +3,7 @@ project(Shapes_area)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Shapes_area main.cpp include/Point.h src/Point.cpp test/Point_test.cpp test/main.cpp include/Curve.h include/Circle.h src/Ellipse.cpp include/Ellipse.h src/PCenter.cpp include/PCenter.h src/PCircle.cpp include/PCircle.h include/Center.h)
+add_executable(Shapes_area main.cpp include/Point.h src/Point.cpp test/Point_test.cpp test/main.cpp include/Curve.h include/Circle.h include/Ellipse.h src/PCenter.cpp include/PCenter.h src/PCircle.cpp include/PCircle.h include/Center.h src/PEllipse.cpp include/PEllipse.h)
 include_directories(Shapes_area include)
 add_subdirectory(test)
 

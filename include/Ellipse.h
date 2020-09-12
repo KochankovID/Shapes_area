@@ -5,28 +5,17 @@
 #ifndef SHAPES_AREA_ELLIPSE_H
 #define SHAPES_AREA_ELLIPSE_H
 
-#include "Point.h"
 #include "Curve.h"
+#include "Center.h"
 
-class Ellipse : public Curve{
+class Ellipse : public Curve, public virtual Center{
 public:
-    Ellipse();
-    Ellipse(const Point& center, double r, double R);
-    Ellipse(double x, double y, double r, double R);
-    Ellipse(const Ellipse& ellipse);
+    virtual double getr() const = 0;
+    virtual void setr(double r) = 0;
+    virtual double getR() const = 0;
+    virtual void setR(double R) = 0;
 
-    double getr() const {return _r;}
-    void setr(const Point& r);
-
-    double getR() const {return _R;}
-    void setR(const Point& R);
-
-    double area() const override;
-
-    ~Ellipse();
-
-private:
-    double _r, _R;
+    ~Ellipse() override {};
 };
 
 
