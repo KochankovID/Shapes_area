@@ -10,8 +10,33 @@ TEST(Point_construct, default_construct_no_throw){
 }
 
 TEST(Point_construct, default_construct_correct){
-    Point point(3,4);
+    Point point;
 
-    ASSERT_EQ(point.x, 3);
-    ASSERT_EQ(point.y, 4);
+    ASSERT_EQ(point.x, 0);
+    ASSERT_EQ(point.y, 0);
+}
+
+TEST(Point_construct, initial_construct_no_throw){
+    ASSERT_NO_THROW(Point(1, 2));
+}
+
+TEST(Point_construct, initial_construct_correct){
+    Point point(1, 2);
+    ASSERT_EQ(point.x, 1);
+    ASSERT_EQ(point.y, 2);
+}
+
+TEST(Point_assignment, assign_operator_no_throw){
+    Point a, b(1,2);
+
+    ASSERT_NO_THROW(a = b);
+}
+
+TEST(Point_assignment, assign_operator_correct){
+    Point a, b(1,2);
+
+    a = b;
+
+    ASSERT_EQ(a.x, 1);
+    ASSERT_EQ(a.y, 2);
 }
