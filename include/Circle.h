@@ -6,30 +6,27 @@
 #define SHAPES_AREA_CIRCLE_H
 
 #include "Curve.h"
-#include "Point.h"
+#include "Center.h"
 
 const double PI = 3.141592653589793;
 
-class Circle : public Curve{
+class Circle : public Curve, public virtual Center{
 public:
-    Circle();
-    Circle(const Point& center, double radius);
-    Circle(double x, double y, double radius);
-    Circle(const Circle& copy);
+    virtual double getRadius() const = 0;
+    virtual void setRadius(double radius) = 0;
+    bool operator==(const Circle& copy) const;
+    bool operator!=(const Circle& copy) const;
 
-    double getRadius() const {return _radius;}
-    void setRadius(double radius);
-
-    double area() const override;
-
-    Circle& operator=(const Circle& copy);
-    bool operator==(const Circle& circle) const;
-    bool operator!=(const Circle& circle) const;
-
-    ~Circle();
-
-private:
-    double _radius;
+    virtual ~Circle() {};
 };
+
+inline bool Circle::operator==(const Circle &copy) const {
+    return (this->getRadius() == copy.getRadius()) &&
+    (this->Center::operator==(copy));
+}
+
+inline bool Circle::operator!=(const Circle &copy) const {
+    return !(*this == copy);
+}
 
 #endif //SHAPES_AREA_CIRCLE_H

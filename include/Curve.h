@@ -9,23 +9,8 @@
 
 class Curve{
 public:
-    Curve();
-    explicit Curve(const Point& center);
-    Curve(const Curve& curve);
-
     virtual double area() const = 0;
-
-    Point& center() {return _center;}
-    const Point& center() const {return _center;}
-
-    Curve& operator=(const Curve& copy);
-    virtual bool operator==(const Curve& copy) const;
-    virtual bool operator!=(const Curve& copy) const;
-
-    virtual ~Curve();
-
-protected:
-    Point _center;
+    virtual ~Curve() {};
 };
 
 #endif //SHAPES_AREA_CURVE_H
