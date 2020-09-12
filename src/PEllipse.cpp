@@ -41,3 +41,10 @@ void PEllipse::setR(double R) {
 double PEllipse::area() const {
     return PI * _r * _R;
 }
+
+PEllipse &PEllipse::operator=(const PEllipse &pEllipse) {
+    _center = pEllipse._center;
+    _r = pEllipse._r;
+    _R = pEllipse._R;
+    return *this;
+}

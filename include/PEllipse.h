@@ -22,6 +22,8 @@ public:
 
     double area() const override;
 
+    PEllipse& operator=(const PEllipse& pEllipse);
+
     ~PEllipse() override {};
 
 private:

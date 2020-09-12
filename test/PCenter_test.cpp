@@ -39,7 +39,8 @@ TEST(PCenter_construct, x_y_construct_correct){
 }
 
 TEST(PCenter_construct, copy_construct_no_throw){
-    ASSERT_NO_THROW(PCenter(2, 3));
+    PCenter pCenter(1,2);
+    ASSERT_NO_THROW(PCenter(pCenter));
 }
 
 TEST(PCenter_construct, copy_construct_correct){
