@@ -95,3 +95,42 @@ TEST(Circle_method, area_correct){
 
     ASSERT_TRUE(abs(circle.area() - 12.56) < 0.01);
 }
+
+TEST(Circle_assignment, assignment_no_throw){
+    Circle circle, circle1(4,5,6);
+
+    ASSERT_NO_THROW(circle = circle1);
+}
+
+TEST(Circle_assignment, assignment_correct){
+    Circle circle, circle1(4,5,6);
+
+    circle = circle1;
+
+    ASSERT_EQ(circle.center(), Point(4,5));
+    ASSERT_EQ(circle.getRadius(), 6);
+}
+
+TEST(Circle_equal, equal_no_throw){
+    Circle circle(4,5,6), circle1(4,5,6);
+
+    ASSERT_NO_THROW(circle == circle1);
+}
+
+TEST(Circle_equal, equal_correct){
+    Circle circle(4,5,6), circle1(4,5,6);
+
+    ASSERT_TRUE(circle == circle1);
+}
+
+TEST(Circle_unequal, unequal_no_throw){
+    Circle circle(4,5,6), circle1(-4,5,6);
+
+    ASSERT_NO_THROW(circle != circle1);
+}
+
+TEST(Circle_unequal, unequal_correct){
+    Circle circle(4,5,6), circle1(-4,5,6);
+
+    ASSERT_TRUE(circle != circle1);
+}
