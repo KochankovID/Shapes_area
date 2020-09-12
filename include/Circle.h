@@ -15,7 +15,13 @@ public:
     Circle(double x, double y, double radius);
     Circle(const Circle& copy);
 
-    double area() override;
+    Point& center() {return this->_center;}
+    const Point& center() const {return this->_center;}
+
+    double getRadius() const {return this->_radius;}
+    void setRadius();
+
+    double area() const override;
 
 private:
     Point _center;

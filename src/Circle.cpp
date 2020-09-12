@@ -28,6 +28,10 @@ Circle::Circle(const Circle &copy) {
     this->_radius = copy._radius;
 }
 
-double Circle::area() {
+double Circle::area() const {
     return 0;
+}
+
+void Circle::setRadius() {
+
 }

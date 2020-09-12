@@ -6,7 +6,7 @@
 #define SHAPES_AREA_CURVE_H
 
 class Curve{
-    virtual double area() = 0;
+    virtual double area() const = 0;
 };
 
 #endif //SHAPES_AREA_CURVE_H
