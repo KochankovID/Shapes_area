@@ -11,22 +11,22 @@
 class Ellipse : public Curve{
 public:
     Ellipse();
-    Ellipse(const Point& focus1, const Point& focus2);
-    Ellipse(double focus1x, double focus1y, double focus2x, double focus2y);
+    Ellipse(const Point& center, double r, double R);
+    Ellipse(double x, double y, double r, double R);
+    Ellipse(const Ellipse& ellipse);
 
-    Point getFocus1() const {return _focus1;}
-    void setFocus1(const Point& focus1);
-    void setFocus1(double x, double y);
+    double getr() const {return _r;}
+    void setr(const Point& r);
 
-    Point getFocus2() const {return _focus2;}
-    void setFocus2(const Point& focus2);
-    void setFocus2(double x, double y);
+    double getR() const {return _R;}
+    void setR(const Point& R);
 
     double area() const override;
 
     ~Ellipse();
+
 private:
-    Point _focus1, _focus2;
+    double _r, _R;
 };
 
 

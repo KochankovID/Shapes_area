@@ -17,21 +17,18 @@ public:
     Circle(double x, double y, double radius);
     Circle(const Circle& copy);
 
-    Point& center() {return _center;}
-    const Point& center() const {return _center;}
-
     double getRadius() const {return _radius;}
     void setRadius(double radius);
 
     double area() const override;
 
     Circle& operator=(const Circle& copy);
-    bool operator==(const Circle& circle);
-    bool operator!=(const Circle& circle);
+    bool operator==(const Circle& circle) const;
+    bool operator!=(const Circle& circle) const;
 
     ~Circle();
+
 private:
-    Point _center;
     double _radius;
 };
 

@@ -6,13 +6,10 @@
 #include "Circle.h"
 #include "exception"
 
-Circle::Circle() {
-    _center = Point();
-    _radius = 1;
+Circle::Circle() : Curve(), _radius(1){
 }
 
-Circle::Circle(const Point &center, double radius) {
-    _center = center;
+Circle::Circle(const Point &center, double radius) : Curve(center){
     this->setRadius(radius);
 }
 
@@ -20,8 +17,7 @@ Circle::Circle(double x, double y, double radius) {
     *this = Circle(Point(x, y), radius);
 }
 
-Circle::Circle(const Circle &copy) {
-    _center = copy._center;
+Circle::Circle(const Circle &copy) : Curve(copy){
     _radius = copy._radius;
 }
 
@@ -46,10 +42,10 @@ Circle &Circle::operator=(const Circle &copy) {
     return *this;
 }
 
-bool Circle::operator==(const Circle &circle) {
+bool Circle::operator==(const Circle &circle) const {
     return (_center == circle._center) and (_radius == circle._radius);
 }
 
-bool Circle::operator!=(const Circle &circle) {
+bool Circle::operator!=(const Circle &circle) const {
     return !(*this == circle);
 }
