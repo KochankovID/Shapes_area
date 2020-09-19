@@ -18,14 +18,11 @@ public:
 
     double randius_generator() const;
     Point center_generator() const;
-
     std::shared_ptr<Curve> curve_generator() const;
-
 
     void setRRange(std::pair<double, double> radius_range);
     void setPmin(Point pointmin);
     void setPmax(Point pointmax);
-
 
     std::pair<double, double> getRRange() const {return _radius_range;}
     Point getPmin() const {return _pointmin;}
