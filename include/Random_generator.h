@@ -5,6 +5,8 @@
 #ifndef SHAPES_AREA_RANDOM_GENERATOR_H
 #define SHAPES_AREA_RANDOM_GENERATOR_H
 
+#include <memory>
+
 #include "Curve.h"
 #include "utility"
 
@@ -17,7 +19,7 @@ public:
     double randius_generator() const;
     Point center_generator() const;
 
-    Curve* curve_generator() const;
+    std::shared_ptr<Curve> curve_generator() const;
 
 
     void setRRange(std::pair<double, double> radius_range);

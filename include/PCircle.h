@@ -18,6 +18,7 @@ public:
     double getRadius() const override {return _radius;};
     void setRadius(double radius) override;
     double area() const override;
+    std::string toString() {return "PCircle(" + _center.toString() + ", " + std::to_string(_radius) + ")";};
 
      PCircle& operator=(const PCircle& copy);
 

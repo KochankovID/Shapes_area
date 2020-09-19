@@ -5,7 +5,10 @@
 #ifndef SHAPES_AREA_POINT_H
 #define SHAPES_AREA_POINT_H
 
+#include <string>
+
 #include "utility"
+
 
 struct Point{
     Point();
@@ -15,6 +18,7 @@ struct Point{
     Point& operator=(const Point& copy);
     bool operator==(const Point& point) const;
     bool operator!=(const Point& point) const;
+    std::string toString() {return "Point(" + std::to_string(x) + ", " + std::to_string(y) + ")";};
 
     virtual ~Point();
 

@@ -1,13 +1,16 @@
 //
 // Created by Ilya Kochankov on 9/19/20.
 //
+#include <iostream>
+#include "cmath"
 
 #include "Random_generator.h"
-#include <iostream>
 #include "PCircle.h"
 #include "PEllipse.h"
 
+
 Random_generator::Random_generator(std::pair<double, double> radius_range, Point pointmin, Point pointmax){
+    srandom(time(nullptr));
     isCorrectRRange(radius_range);
     _radius_range = radius_range;
     isCorrectPointsMinMax(pointmin, pointmax);
@@ -28,21 +31,19 @@ Point Random_generator::center_generator() const {
     return Point(_random_generator(_pointmin.x, _pointmax.x), _random_generator(_pointmin.y, _pointmax.y));
 }
 
-Curve *Random_generator::curve_generator() const {
-    switch(int(_random_generator(0,1))) {
+std::shared_ptr<Curve> Random_generator::curve_generator() const {
+    switch(int(std::round(_random_generator(0,1)))) {
         case 0: {
-            return new PCircle(center_generator(), randius_generator());
-            break;
+            return std::make_shared<PCircle>(center_generator(), randius_generator());
         }
         case 1: {
-            return new PEllipse(center_generator(), randius_generator(), randius_generator());
-            break;
+            return std::make_shared<PEllipse>(center_generator(), randius_generator(), randius_generator());
         }
     }
 }
 
 double Random_generator::_random_generator(double min, double max) const {
-    return rand() / RAND_MAX * (max - min) + min;
+    return rand() / double (RAND_MAX) * (max - min) + min;
 }
 
 void Random_generator::setRRange(std::pair<double, double> radius_range) {

@@ -19,6 +19,7 @@ public:
     void setr(double r) override;
     double getR() const override {return _R;};
     void setR(double R) override;
+    std::string toString() {return "PEllipse(" + _center.toString() + ", " + std::to_string(_r) + ", " + std::to_string(_R) + ")";};
 
     double area() const override;
 

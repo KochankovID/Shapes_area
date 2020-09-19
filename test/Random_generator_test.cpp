@@ -101,9 +101,7 @@ TEST(Random_generator, center_generator){
 
 TEST(Random_generator, curve_random_type_generator){
     Random_generator randomGenerator;
-    Curve* curve;
+    std::shared_ptr<Curve> curve;
 
     ASSERT_NO_THROW(curve = randomGenerator.curve_generator());
-
-    delete curve;
 }
