@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "PEllipse.h"
+#include "Point_implementation/PEllipse.h"
 #include "cmath"
 
 TEST(PEllipse_construct, default_construct_no_throw){

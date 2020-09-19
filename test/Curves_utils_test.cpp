@@ -6,8 +6,8 @@
 
 #include "gtest/gtest.h"
 #include "Curves_utils.h"
-#include "PCircle.h"
-#include "PEllipse.h"
+#include "Point_implementation/PCircle.h"
+#include "Point_implementation/PEllipse.h"
 
 
 using namespace std;

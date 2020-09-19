@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "PCenter.h"
+#include "Point_implementation/PCenter.h"
 
 TEST(PCenter_construct, default_construct_no_throw){
     ASSERT_NO_THROW(PCenter());

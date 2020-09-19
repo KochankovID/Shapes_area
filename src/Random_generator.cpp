@@ -5,8 +5,8 @@
 #include "cmath"
 
 #include "Random_generator.h"
-#include "PCircle.h"
-#include "PEllipse.h"
+#include "Point_implementation/PCircle.h"
+#include "Point_implementation/PEllipse.h"
 
 
 Random_generator::Random_generator(std::pair<double, double> radius_range, Point pointmin, Point pointmax){

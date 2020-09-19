@@ -5,7 +5,7 @@
 #ifndef SHAPES_AREA_PELLIPSE_H
 #define SHAPES_AREA_PELLIPSE_H
 
-#include "Ellipse.h"
+#include "interface/Ellipse.h"
 #include "PCenter.h"
 
 class PEllipse : public PCenter, public Ellipse{

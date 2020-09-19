@@ -7,7 +7,7 @@
 
 #include <memory>
 
-#include "Curve.h"
+#include "interface/Curve.h"
 #include "utility"
 
 class Random_generator{

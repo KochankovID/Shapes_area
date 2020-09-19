@@ -5,7 +5,7 @@
 #ifndef SHAPES_AREA_CenterPoint_H
 #define SHAPES_AREA_CenterPoint_H
 
-#include "Center.h"
+#include "interface/Center.h"
 #include "Point.h"
 
 class PCenter : public virtual Center{

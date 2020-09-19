@@ -7,7 +7,7 @@
 
 #include <algorithm>
 
-#include "Curve.h"
+#include "interface/Curve.h"
 
 
 template<typename T>

@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "Point.h"
+#include "Point_implementation/Point.h"
 
 TEST(Point_construct, default_construct_no_throw){
     ASSERT_NO_THROW(Point());

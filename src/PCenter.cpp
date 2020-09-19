@@ -2,7 +2,7 @@
 // Created by Ilya Kochankov on 9/12/20.
 //
 
-#include "PCenter.h"
+#include "Point_implementation/PCenter.h"
 
 PCenter::PCenter() : _center(){
 

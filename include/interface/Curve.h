@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "Point.h"
+#include "Point_implementation/Point.h"
 
 
 const double PI = 3.141592653589793;

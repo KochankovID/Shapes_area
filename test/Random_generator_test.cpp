@@ -4,8 +4,8 @@
 
 #include "gtest/gtest.h"
 #include "Random_generator.h"
-#include "PCircle.h"
-#include "PEllipse.h"
+#include "Point_implementation/PCircle.h"
+#include "Point_implementation/PEllipse.h"
 
 
 TEST(Random_generator, no_param_construct_no_throw){

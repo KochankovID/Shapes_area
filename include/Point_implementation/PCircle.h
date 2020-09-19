@@ -5,7 +5,7 @@
 #ifndef SHAPES_AREA_PCIRCLE_H
 #define SHAPES_AREA_PCIRCLE_H
 
-#include "Circle.h"
+#include "interface/Circle.h"
 #include "PCenter.h"
 
 class PCircle : public PCenter, public Circle{
