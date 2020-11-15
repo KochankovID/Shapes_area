@@ -7,6 +7,7 @@
 
 #include "interface/Ellipse.h"
 #include "PCenter.h"
+#include "PerimeterVisitor.h"
 
 class PEllipse : public PCenter, public Ellipse{
 public:
@@ -20,6 +21,7 @@ public:
     double getR() const override {return _R;};
     void setR(double R) override;
     std::string toString() {return "PEllipse(" + _center.toString() + ", " + std::to_string(_r) + ", " + std::to_string(_R) + ")";};
+    double accept(const VisitorBase& visitor);
 
     double area() const override;
 

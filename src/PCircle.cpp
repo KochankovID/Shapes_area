@@ -42,3 +42,7 @@ PCircle::~PCircle() {
 
 }
 
+double PCircle::accept(const VisitorBase &visitor) {
+    return visitor.perimeter_circle(*this);
+}
+

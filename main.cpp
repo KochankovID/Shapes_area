@@ -3,6 +3,7 @@
 
 #include "Random_generator.h"
 #include "Curves_utils.h"
+#include "PerimeterVisitor.h"
 
 
 using namespace std;
@@ -25,7 +26,7 @@ int main() {
         return f_curve->area() < s_curve->area();
     });
 
-    cout << "Отсортированные кривые: " << endl;
+    cout << endl << "Отсортированные кривые: " << endl;
 
     for(auto i = vector_of_curves.begin(); i < vector_of_curves.end(); i++){
         cout << (*i)->toString() << endl;
@@ -35,6 +36,12 @@ int main() {
 
     double t_area = total_area(vector_of_curves.begin(), vector_of_curves.end());
     cout << t_area << endl;
+
+    cout << endl << "Периметры кривых: " << endl;
+    auto visitor = PerimeterVisitor();
+    for(auto i = vector_of_curves.begin(); i < vector_of_curves.end(); i++){
+        cout << (*i)->toString() << ": " << (*i)->accept(visitor) << endl;
+    }
 
     return 0;
 }

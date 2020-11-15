@@ -7,6 +7,7 @@
 
 #include "interface/Circle.h"
 #include "PCenter.h"
+#include "PerimeterVisitor.h"
 
 class PCircle : public PCenter, public Circle{
 public:
@@ -19,6 +20,7 @@ public:
     void setRadius(double radius) override;
     double area() const override;
     std::string toString() {return "PCircle(" + _center.toString() + ", " + std::to_string(_radius) + ")";};
+    double accept(const VisitorBase& visitor);
 
      PCircle& operator=(const PCircle& copy);
 

@@ -48,3 +48,7 @@ PEllipse &PEllipse::operator=(const PEllipse &pEllipse) {
     _R = pEllipse._R;
     return *this;
 }
+
+double PEllipse::accept(const VisitorBase &visitor) {
+    return visitor.perimeter_ellipse(*this);
+}
